@@ -1,0 +1,84 @@
+body {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.cart {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100px;
+    margin-bottom: 20px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.product h3 {
+    margin: 0;
+}
+
+.product p {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.delete-button, .increment-button, .decrement-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.quantity {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilo para el botón de Comprar */
+/* Estilo para el botón de Comprar */
+.comprar-button {
+    background-color: #45db34;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+
+    /* Añade flexbox para centrar el botón */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comprar-button:hover {
+    background-color: #2eb929;
+}
+
+/* Estilo para el contenedor del botón */
+.button-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.total {
+    position: fixed;
+    top: 0;
+    color: #000000;
+    text-align: center;
+    font-size: 30px;
+}

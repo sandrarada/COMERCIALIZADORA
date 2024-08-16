@@ -1,0 +1,97 @@
+{% load static %}
+
+<nav class="navbar ">
+    <div class="container-fluid">
+        <div class="container-fluid"><!-- inicio barra enlaces -->
+            <div class="navmenu d-flex menuicono row py-2 px-xl-5">
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-dark" href="{% url 'FAQs'%}">FAQs</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-end">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-dark" href="{% url 'login'%}">Ingresar</a>
+                        <span class="text-muted px-2">|</span>
+                        <a class="text-dark" href="{% url 'newUser'%}">Crear cuenta</a>
+                        <span class="text-muted px-2">|</span>
+                        <a href="https://www.instagram.com/xilenadesigns/"><box-icon type='logo'  name='instagram'></box-icon></a>
+                        <span class="text-muted px-2">|</span>
+                        <a href="https://web.facebook.com/xilenadesigns?_rdc=1&_rdr"><box-icon type='logo' name='facebook-circle'></box-icon></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <!--fin barra de enlaces  -->
+
+    <!-- header -->
+    <div class="cajaBusqueda row align-items-center py-3 px-xl-5">
+        <div class="cajaBusqueda col-lg-3 d-none d-lg-block">
+            <a href="/" class="fondoLogo text-decoration-none">
+                <img class="fondoLogo m-0 display-5 font-weight-semi-bold" src= "{% static '/img/logoXilena.jfif' %}" >
+            </a>
+        </div>
+        <div class="fondoLogo col-lg-6 col-6 text-left">
+            <form action="">
+                <div class="Boton input-group">
+                    <input type="text" class="form-control" placeholder="Buscar productos">
+                    <div class="Ibuscar input-group-append">                      
+                        <button class="btn btn-outline-secondary" type="button">
+                            <box-icon name='search-alt-2' ></box-icon>
+                        </button>                       
+                    </div>
+                </div>
+            </form>
+        </div> 
+        <div class="cajaBusqueda col-lg-3 col-6 ">
+            <div class="row">
+                <div class="col-6">
+                    <a href="">
+                        {% comment %} <box-icon name='cart' ></box-icon> {% endcomment %}
+                    </a>
+                </div>
+            <!-- Navbar Start -->
+                    <button class="navbar-toggler col-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">collares</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">aretes</a>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                
+                <!-- fin navbar -->
+                
+            </div>
+        
+    </div>
+    
+    
+</div>
+</nav>
+
+    
+<!-- header -->
+
+
+
+

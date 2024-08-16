@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    LBK comercializadora - Productos
+{% endblock title %}
+
+{% block contentCSS %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    
+
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/assets/owl.carousel.min.css' %}">
+{% endblock  %}
+
+<!-- ========== Start NAVBAR ========== -->
+    {% block nav %}
+        {% include "products/components/topbar.html" %}
+        {% include "products/components/navbar.html" %}
+        {% include "products/components/header.html" %}
+    {% endblock  %}
+<!-- ========== End NAVBAR ========== -->
+
+<!-- ========== Start SECTION ========== -->
+    {% block SECTION %}
+        {% include "products/components/shop.html" %}
+    {% endblock  %}
+<!-- ========== End SECTION ========== -->
+
+
+<!-- ========== Start FOOTER ========== -->
+    {% block footer %}
+        {% include "products/components/footer.html" %}
+    {% endblock  %}
+<!-- ========== End FOOTER ========== -->
+
+
+<!-- ========== Start ESTATICOS JS DE LA PAGINA ========== -->
+    {% block contentJS %}   
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static  'home/js/easing/easing.min.js' %}"></script>
+    <script src="{% static  'home/js/easing/owl.carousel.min.js' %}"></script>
+    {% endblock  %}
+<!-- ========== End ESTATICOS  JS DE LA PAGINA ========== -->

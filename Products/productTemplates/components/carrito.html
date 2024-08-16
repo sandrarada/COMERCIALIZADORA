@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% load static %}
+{% block contentCSS %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    
+
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/assets/owl.carousel.min.css' %}">
+{% endblock  %}
+
+
+<!-- ========== Start NAVBAR ========== -->
+{% block nav %}
+{% include "products/components/topbar.html" %}
+
+
+{% endblock  %}
+<!-- ========== End NAVBAR ========== -->
+
+{% block SECTION %}     
+
+
+
+<!-- antes de cargarlos  -->
+<!-- <div id="loading" class="container mt-5">
+    <h2>Carrito de Compras</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Subtotal</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th class="placeholder-glow" scope="row">
+                    <span class="placeholder col-12"></span>
+                </th>
+                <td class="placeholder-glow"><span class="placeholder col-12"></span></td>
+                <td class="placeholder-glow"><span class="placeholder col-12"></span></td>
+                <td class="placeholder-glow"><span class="placeholder col-12"></span></td>
+                <td class="placeholder-glow"><span class="placeholder col-12"></span></td>
+                <td class="placeholder-glow">
+                    <button class="btn btn-sm btn-danger placeholder disabled"></button>
+                </td>
+            </tr>
+            <tr>
+                <th class="placeholder-glow" scope="row">
+                    <span class="placeholder col-12"></span>
+                </th>
+                <td class="placeholder-glow"><span class="placeholder col-12"></span></td>
+                <td class="placeholder-glow"><span class="placeholder col-12"></span></td>
+                <td class="placeholder-glow"><span class="placeholder col-12"></span></td>
+                <td class="placeholder-glow"><span class="placeholder col-12"></span></td>
+                <td class="placeholder-glow">
+                    <button class="btn btn-sm btn-danger placeholder disabled"></button>
+                </td>
+            </tr>
+            <tr>
+                <th class="placeholder-glow" scope="row">
+                    <span class="placeholder col-12"></span>
+                </th>
+                <td class="placeholder-glow"><span class="placeholder col-12"></span></td>
+                <td class="placeholder-glow"><span class="placeholder col-12"></span></td>
+                <td class="placeholder-glow"><span class="placeholder col-12"></span></td>
+                <td class="placeholder-glow"><span class="placeholder col-12"></span></td>
+                <td class="placeholder-glow">
+                    <button class="btn btn-sm btn-danger placeholder disabled"></button>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <div class="text-end">
+        <p class="placeholder-glow">
+            <span class="placeholder col-2"></span>
+        </p>
+        <button class="btn btn-primary disabled">Pagar</button>
+    </div>
+</div> -->
+
+
+<div  id="loaded" class="container mt-5">
+    <h2>Carrito de Compras</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Subtotal</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for item in items %}
+            <tr>
+                <th scope="row">1</th>
+                <td>{{ item.product }}</td>
+                <td>{{ item.product.price }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>{{ total_items }}</td>
+                
+                
+                <td>
+
+                    
+                        <a class="btn btn-sm btn-outline-success" href="{% url 'addOneItemCart' item.product_id %}">
+                            <i class="fas fa-plus"></i>
+                            Añadir
+                        </a>
+                        <a class="btn btn-sm btn-outline-danger"  href="{% url 'deleteItemCart' item.product_id %}">
+                            <i class="fas fa-trash-alt"></i>
+                            Eliminar
+                        </a>
+                    
+                </td>
+            </tr>
+            {% endfor %}
+            
+            <!-- Agrega más filas según sea necesario -->
+        </tbody>
+    </table>
+
+    <div class="text-end">
+        <p>Total: $65.00</p>
+        <button class="btn btn-outline-info">Pagar</button>
+    </div>
+</div>
+
+
+
+{% endblock  %}
